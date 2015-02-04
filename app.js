@@ -6,7 +6,18 @@ var events = require('events');
 var util = require('util');
 
 var server = net.createServer(function(connection) {
-	console.log('connection opened');
+
+	var address = connection.remoteAddress;
+
+	console.log('connection opened from ' + address);
+
+	connection.on('end', function() {
+		console.log('connection from ' + address + ' closed\n');
+	});
+
+	connection.on('data', function() {
+		connection.write('No chance!\n');
+	});
 
 	connection.write('Let off some steam, Bennett!');
 });
