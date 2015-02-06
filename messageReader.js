@@ -11,6 +11,7 @@ var MessageReader = function(stream) {
 
 	stream.on('data', function(data) {
 		buffer += data;
+
 		var boundary = buffer.indexOf('\r\n');
 		while(boundary !== -1) {
 			var message = buffer.substr(0, boundary);
