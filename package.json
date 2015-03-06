@@ -4,7 +4,8 @@
   "description": "Raptor IRC",
   "main": "app.js",
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "start": "node app.js"
   },
   "author": "MrCochese",
   "license": "ISC",
