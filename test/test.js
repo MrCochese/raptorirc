@@ -21,6 +21,21 @@ describe('MessageReader', function() {
     });
 });
 
+// describe('New Connection', function() {
+//     it('users added', function(done) {
+//         var stream = new events.EventEmitter();
+
+//         var reader = messageReader.read(stream);
+
+
+//         reader.on('message', function(message) {
+//             assert.equal('User registered: Paul', message);
+//             done();
+//         });
+
+//         stream.emit('data', 'USER Paul\r\n');
+//     });
+// });
 
 // describe('A connected server with message NICK has barry', function() {
 //     it('should emit a command event', function(done) {
